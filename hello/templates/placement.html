@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>PLACEMENT</title>
+ 
+<div class="basic">
+{% include 'navbar.html'%}   
+</div>
+    
+<div class="center center_div">
+          <div class="row">
+            <div class="col-md-4 companyw">
+              <div class="company">
+                <img src="{% static '1.png'%}" class="pimg">
+                <h2>2018</h2>
+                
+          </div>    
+          </div>
+
+          <div class="col-md-4 companyw">
+              <div class="company">
+                <img src="{% static '1.png'%}" class="pimg">
+                <h2>2017</h2>
+                
+          </div>    
+          </div>
+
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Dell', 8],
+  ['Microsoft', 2],
+  ['Xiomi', 4],
+  ['Intel', 2],
+  ['Huawei', 8]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'2018', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+<div id="piechart2"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Apple', 'Hours per Day'],
+  ['Hitachi', 1],
+  ['Airtel', 2],
+  ['Acer', 3],
+  ['Sony', 5],
+  ['Samsung', 1]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'2017', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+  chart.draw(data, options);
+}
+</script>
+
+
+</body>
+</html>
+    

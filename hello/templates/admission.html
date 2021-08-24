@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>MCET</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+
+<body>
+
+  <div class="basic">
+{% include 'navbar.html'%}   
+</div>
+
+<div class="center center_div">
+        <td align="left" valign="top">&nbsp;</td>
+        <td width="748" align="left" valign="top" bgcolor="#000033"><div align="center"><span class="welTxt1 style6"><h2>Step 2:Enter Your Details</h2></span></div></td>
+  
+
+    <form action="/admission_hid/" method="post" >
+
+{% csrf_token %}
+
+
+<div class="center center_div">
+<div class="form-row">
+  <div class="form-group col-md-6">
+   <label form="firstname" class="mr-sm-2"> First Name</label>
+    <input class="form-control" type="text" id="fname" name="fname" placeholder="First Name" value="{{ f_name }}">
+  </div>
+
+   <div class=" form-group col-md-6">
+    <label for="lastname" class="mr-sm-2"> Last Name</label>
+      <input class="form-control" type="text" id="lname" name="lname" placeholder="Last Name" value="{{ l_name }}">
+ </div>
+</div>
+<p>Gender</p>
+  <label class="container col-md-6"><input  type="radio" name="gender" value="m">Male</label>
+   
+   
+
+   <label class="container col-md-6"><input checked="" type="radio" name="gender" value="f">Female</label>
+
+   <p>Email</p>
+  <p><input class="form-control" type="email" id="email" name="email" placeholder="Enter Your Email" value="{{ e_mail }}" > </p>
+
+   <p>Phone Number</p>
+ <p><input class="form-control" type="Number" name="phone" placeholder="Enter Your phone Number" value="{{ phone }}"></p> 
+
+  <p>Guardian Name</p> 
+   <p><input class="form-control" type="text" name="gname" placeholder="Enter Your Guardian's Name" value="{{ gname }}"></p>
+
+  <p>Guardian's Phone Number</p>
+ <p><input class="form-control" type="Number" name="gphone" placeholder="Enter Your phone Number" value="{{ gphone }}"></p> 
+
+  <p>Address</p>
+  <p><input class="form-control" type="text" name="address" placeholder="Enter Your phone Address" height="100%" width="100%" value="{{ address }}"></p> 
+
+<div class="center center_div">
+    <div class="form-row">
+       <div class="form-group col-md-6">
+<label class="mr-sm-2" >10th Parcentage</label>
+<p><input class="form-control" type="Number" name="sec" placeholder="%" value="{{ sec }}"></p>
+</div>
+<div class="form-group col-md-6">
+<label class="mr-sm-2" >10th Grade card</label>
+    <p><input type="file" name="10pic" id="fileToUpload"></p>
+  </div>
+</div>
+</div>
+   
+<div class="center center_div">
+    <div class="form-row">
+       <div class="form-group col-md-6">
+<label class="mr-sm-2" >12th Parcentage</label>
+<p><input class="form-control" type="Number" name="hsec" placeholder="%" value="{{ hsec }}" ></p>
+</div>
+       <div class="form-group col-md-6">
+<label class="mr-sm-2" >12th Grade card</label>
+  <p><input type="file" name="12pic" id="fileToUpload"></p>
+</div>
+</div>
+</div>
+
+<div class="center center_div">
+    <div class="form-row">
+       <div class="form-group col-md-6">
+<label class="mr-sm-2" >WBJEE Rank</label>
+    <p><input class="form-control" type="Number" name="wbjee" placeholder="Rank" value="{{ wbjee }}"  id="wbjee"></p>
+    </div>
+<div class="form-group col-md-6">
+ <label class="mr-sm-2" >Rank Card</label>
+    <p><input  type="file" name="12pic" id="fileToUpload"></p>
+    </div>
+    </div>
+  </div>
+
+    <p><button onclick="save()" class="btn btn-primary">Save</button></p>
+
+<script>
+function save() {
+{
+    alert("Save Success");
+    window.location='/'
+    }
+}
+</script>
+   
+    
+   </form>
+
+</body>
+</html>

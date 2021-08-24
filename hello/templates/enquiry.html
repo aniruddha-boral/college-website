@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>MCET</title>
+ 
+<body>
+
+   <div class="basic">
+{% include 'navbar.html'%}   
+</div>
+
+<div class="center center_div">
+  <h2>Step 1: Check Your Eligibility</h2>
+  
+<div class="form-row">
+  <div class="form-group col-md-6">
+   
+ <p>10th Parcentage (you must have minimum 50% marks to be eligible)</p>
+  <p><input class="form-control" type="Number" name="sec" placeholder="%" value="{{ sec }}"id="sec"></p>
+
+ <p>12th Parcentage (you must have minimum 70% marks to be eligible)</p>
+  <p><input class="form-control" type="Number" name="hsec" placeholder="%" value="{{ hsec }}" id="hs"></p>
+
+  <p>WBJEE Rank (you must have at least 50,000 rank to be eligible)</p>
+    <p><input class="form-control" type="Number" name="wbjee" placeholder="Rank" value="{{ wbjee }}"  id="wbjee"></p>
+
+   <p><button onclick="check()" class="btn btn-primary">Check Eligibility</button></p>
+
+<script>
+function check() {
+  var a = document.getElementById("sec").value;
+  var b = document.getElementById("hs").value;
+  var c = document.getElementById("wbjee").value;
+  if (a >= 50 && b >= 70 && c <= 50000){
+  alert("Congratulations,You are eligible for admission! ... press ok for step 2");
+    window.location='/admission/'
+    }
+else {
+    alert("Sorry,You are not eligible.");
+    window.location='/enquiry/'
+    }
+}
+</script>
+  </div>
+
+</body>
+</html>

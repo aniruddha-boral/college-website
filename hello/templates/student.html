@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>MCET</title>
+    
+<div class="basic">
+{% include 'navbar.html'%}   
+</div>
+
+ <div class="center center_div">
+ <body>
+  <div class="container">
+  <h2>Welcome to MCET</h2>
+  
+  <span class="badge badge-dark">Name</span>
+  <span class="badge badge-secondary">Rakesh Paul</span>
+  
+</div>
+<div class="container">
+  
+  <span class="badge badge-dark">Roll No</span>
+  <span class="badge badge-secondary">16100116077</span>
+  
+</div>
+
+  <strong>Semester Fee Structure</strong>
+
+<div class="container">
+            
+  <table class="table">
+    <thead>
+
+      <tr>
+        <th>1ST SEM</th>
+        <th>2ND SEM</th>
+        <th>3RD SEM</th>
+        <th>4TH SEM</th>
+        <th>5TH SEM</th>
+        <th>6TH SEM</th>
+        <th>7TH SEM</th>
+        <th>8TH SEM</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+     
+
+      <tr>
+        <td><form action="/student/">36,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Paid" class="btn btn-success" ></td>
+                <td><form action="/student/">40,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Paid" class="btn btn-success" ></td>
+                <td><form action="/student/">30,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Paid" class="btn btn-success" ></td>
+                <td><form action="/student/">40,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Due" class="btn btn-warning" ></td>
+               <td><form action="/student/">36,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Due" class="btn btn-warning" ></td>
+                <td><form action="/student/">40,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+               <td><form action="/student/">36,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+               <td><form action="/student/">40,000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+
+          </form>
+
+      </tr>
+
+
+      
+    </tbody>
+  </table>
+
+ <strong>Hostel Fee Structure</strong>
+
+<div class="container">
+            
+  <table class="table">
+    <thead>
+
+      <tr>
+        <th>1ST SEM</th>
+        <th>2ND SEM</th>
+        <th>3RD SEM</th>
+        <th>4TH SEM</th>
+        <th>5TH SEM</th>
+        <th>6TH SEM</th>
+        <th>7TH SEM</th>
+        <th>8TH SEM</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+     
+
+      <tr>
+        <td><form action="/student/">1000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Paid" class="btn btn-success" ></td>
+                <td><form action="/student/">1000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Paid" class="btn btn-success" ></td>
+                <td><form action="/student/">2000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Due" class="btn btn-warning" ></td>
+                <td><form action="/student/">3000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+               <td><form action="/student/">1000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+                <td><form action="/student/">1000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+               <td><form action="/student/">2000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+               <td><form action="/student/">1000
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Pay Now" class="btn btn-info" ></td>
+
+          </form>
+
+      </tr>
+   
+    </tbody>
+  </table>
+
+</div>
+<p><button onclick="logout()" class="btn btn-danger">Logout</button></p>
+
+
+<script>
+function logout() {
+{
+    alert("Logout Succeed");
+    window.location='/'
+    }
+}
+</script>
+</body>
+</html>

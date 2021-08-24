@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>MCET</title>
+    
+<div class="basic">
+{% include 'navbar.html'%}   
+</div>
+
+ <div class="center center_div">
+ <body>
+  <div class="container">
+  <h2>MCET Admin Page</h2>
+  <div class="center center_div">
+    <div class="center center_div">
+      <div class="center center_div">
+        <div class="center center_div">
+          <div class="center center_div">
+            <div class="center center_div">
+    
+    <button type="button" class="btn btn-light btn-lg">Welcome, Ritwik Verma</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <span class="badge badge-primary">No of Students</span>
+  <span class="badge badge-danger">{{ lq }}</span>
+  
+</div>
+<div class="container">
+  
+  <span class="badge badge-primary">Male</span>
+  <span class="badge badge-danger">{{ lr }}</span>
+  
+</div>
+<div class="container">
+  
+  <span class="badge badge-primary">Female</span>
+  <span class="badge badge-danger">{{ ls }}</span>
+  
+</div>
+
+<div class="container">
+            
+  <table class="table">
+    <thead>
+
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Guardian's name</th>
+        <th>Guardian's Phone number</th>
+        <th>Address</th>
+        <th>10th score</th>
+        <th>12th score</th>
+        <th>WBJEE</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in lp %}
+
+      <tr>
+        <td>{{p.fname}}</td>
+        <td>{{p.lname}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.phone}}</td>
+        <td>{{p.gname}}</td>
+        <td>{{p.gphone}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.sec}}</td>
+        <td>{{p.hsec}}</td>
+        <td>{{p.wbjee}}</td>
+        <td><button onclick="edit()" class="btn btn-primary">Edit</button></td>
+        <script>
+function edit() {
+{
+    
+    window.location='/admission/'
+    }
+}
+</script>
+        <td><form action="/delete/" method="post">
+            <input type="hidden" value="{{p.id}}" name="did">
+            <input type="submit" value="Delete" class="btn btn-danger" ></td>
+          </form>
+
+      </tr>
+
+{% endfor %}
+      
+    </tbody>
+  </table>
+
+<p><button onclick="logout()" class="btn btn-danger">Logout</button></p>
+
+
+<script>
+function logout() {
+{
+    alert("Logout Succeed");
+    window.location='/'
+    }
+}
+</script>
+
+
+</div>
+
+
+</body>
+</html>
